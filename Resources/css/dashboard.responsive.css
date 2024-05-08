@@ -1,0 +1,756 @@
+@media (max-width: 1650px) {
+  .container {
+    width: 100%;
+  }
+  .chating-page-container .chating-container {
+    /* grid-template-columns: 250px auto; */
+  }
+}
+@media (max-width: 1350px) and (min-width: 1281px) {
+  .team-developers .team-developers-circle-container {
+    width: 350px;
+  }
+  .chating-page-container .team-developers-container {
+    width: 39.1%;
+  }
+}
+@media (max-width: 1300px) {
+  .projects-messsages-timeline-container {
+    grid-template-columns: auto 500px;
+    grid-template-rows: auto 500px;
+    grid-template-areas: "projects messages" "chart chart";
+  }
+  .projects-messsages-timeline-container .all-projects-container {
+    grid-template-rows: auto auto;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    grid-area: projects;
+    row-gap: 20px;
+    /* aspect-ratio: 1/1; */
+  }
+  .projects-messsages-timeline-container .messages-holder-container {
+    grid-area: messages;
+  }
+  .projects-messsages-timeline-container .projects-timeline-container {
+    grid-area: chart;
+  }
+}
+@media (max-width: 1280px) {
+  .chating-page-container .team-developers-container::before {
+    inset: 0;
+    height: calc(100vh - 80px);
+    position: sticky;
+    top: 0;
+    width: 100%;
+  }
+  .chating-page-container {
+    position: relative;
+  }
+  .chating-page-container .team-developers-container {
+    position: absolute;
+    width: 100%;
+    max-height: calc(100vh - 80px);
+    inset: 0;
+    overflow-y: scroll;
+    z-index: 5;
+    transform: scale(0);
+    /* left: -100vw; */
+    transition: all 0.3s ease;
+  }
+  .chating-page-container
+    .team-developers-container:has(
+      input#responsive-developer-team-toggle:checked
+    ) {
+    transform: scale(1);
+    /* left: 0; */
+  }
+  .team-developers-container .team-developers {
+    position: absolute;
+    top: 0;
+  }
+  .responsive-developer-team-toggle-label input {
+    display: none;
+  }
+  .responsive-developer-team-toggle-label {
+    position: absolute;
+    top: 25px;
+    right: 30px;
+    font-size: 24px;
+    display: block;
+    z-index: 5;
+  }
+  .responsive-developer-team-toggle-open-btn {
+    display: flex;
+  }
+  .responsive-developer-team-toggle-open-btn,
+  .responsive-prev-chat-toggle-open-btn {
+    width: 35px;
+    aspect-ratio: 1/1;
+    border: 1px solid grey;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+  .chating-page-container .chating-container {
+    width: 100%;
+  }
+  .chating-page-container .chating-container {
+    grid-template-columns: 290px auto;
+  }
+  .chating-container .message-members-container {
+    border-top-left-radius: 8px;
+  }
+  .responsive-message-toggle-btns {
+    display: flex;
+    column-gap: 10px;
+  }
+}
+
+@media (max-width: 1275px) {
+  .chat-projects-todos {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "chat-members project-range  "
+      "chat-members completed-projects  "
+      "chat-members completed-projects "
+      "todos todos";
+  }
+  .tasks-related-content {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat(3, max-content);
+    grid-template-areas:
+      "needed-tasks upcoming-tasks"
+      "needed-tasks upcoming-tasks"
+      "timeline timeline";
+  }
+}
+
+@media (max-width: 1200px) {
+  .projects-messsages-timeline-container .all-projects-container {
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: 100%;
+    /* grid-area: projects; */
+    row-gap: 20px;
+    /* aspect-ratio: 1/1; */
+  }
+  .projects-messsages-timeline-container
+    .messages-holder-container
+    .chat-messages-container
+    .chat-all-messages {
+    max-height: 100vh;
+  }
+  .projects-messsages-timeline-container {
+    grid-template-columns: 200px auto;
+  }
+}
+
+@media (max-width: 1100px) {
+  .projects-main-container .projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 10px));
+    grid-template-rows: repeat(auto-fill, max-content);
+    gap: 20px;
+  }
+  .projects-container .project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(auto-fill, max-content);
+    position: relative;
+    padding: 0;
+  }
+  .project-container .project-name,
+  .project-container .project-serial {
+    background: #f4f4f4e2;
+    border-bottom: inherit;
+  }
+  .project-container .project-name {
+    border-top-right-radius: inherit;
+    width: unset;
+  }
+  .project-container .project-serial {
+    border-top-left-radius: inherit;
+    padding: 15px 10px;
+  }
+  .project-container .project-name > * {
+    position: absolute;
+    left: 70px;
+  }
+  .project-container .project-name > p {
+    top: 15px;
+  }
+  .project-container .project-name > b {
+    top: 35px;
+  }
+  .project-container .project-range,
+  .project-container .project-timeline,
+  .project-container .project-team-members,
+  .project-container .project-button {
+    padding: 10px;
+  }
+  .project-container .project-team-members,
+  .project-container .project-button {
+    border-top: inherit;
+  }
+  .project-container .project-timeline {
+    display: flex;
+    flex-direction: column;
+    max-width: max-content;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 980px) and (min-width: 861px), (max-width: 760px) {
+  .projects-main-container .projects-container {
+    grid-template-columns: repeat(1, 100%);
+  }
+}
+
+@media (max-width: 1150px) and (min-width: 961px),
+  (max-width: 860px) and (min-width: 751px),
+  (max-width: 500px) {
+  .payment-method-container .card-details-btn,
+  .billing-plan-container .billing-buttons {
+    flex-direction: column;
+    align-items: baseline;
+    row-gap: 15px;
+  }
+  .card-details-btn .card-btn,
+  .card-details-btn .card-btn a,
+  .billing-plan-container .billing-buttons a {
+    width: 100%;
+  }
+}
+@media (max-width: 960px) and (min-width: 861px), (max-width: 750px) {
+  .billing-plans-container .billing-payment-container {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .billing-plans-container .billing-payment-container > * {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header-right-content .search-input {
+    margin-right: 12vw;
+  }
+}
+
+@media (max-width: 900px) {
+  .header-right-content .search-input {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 860px) {
+  header > .responsive-hamburger-btn {
+    display: flex;
+  }
+  .header-right-content .search-input {
+    margin: 0;
+  }
+  .responsive-hamburger-close-btn {
+    display: flex;
+    padding: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 22px;
+  }
+  .header-right-content {
+    position: fixed;
+    top: 0;
+    right: -100vw;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    display: flex;
+    flex-direction: column-reverse;
+    transition: all 0.3s ease;
+    z-index: 10;
+    padding: 10px;
+    min-width: 240px;
+  }
+  .header-right-content .user-info {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin: 10px 0;
+  }
+  .navigation-sidebar-container {
+    position: fixed;
+    top: 125px;
+    right: -100vw;
+    transition: all 0.3s ease;
+    height: calc(100vh - 125px);
+    overflow-y: scroll;
+  }
+  header:has(
+      .responsive-hamburger-btn.responsive-hamburger-btn
+        input#responsive-hamburger-checkbox:checked
+    )
+    .header-right-content {
+    right: 0;
+  }
+  body:has(
+      header
+        .responsive-hamburger-btn.responsive-hamburger-btn
+        input#responsive-hamburger-checkbox:checked
+    )
+    .navigation-sidebar-container {
+    right: 0;
+    z-index: 10;
+    width: 40%;
+  }
+  .main-content-container {
+    border-radius: 0;
+  }
+  .navigation-sidebar-container {
+    max-height: calc(100vh - 125px);
+    min-height: calc(100vh - 125px);
+  }
+  .chating-container .message-members-container {
+    border-top-left-radius: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .transaction-list .table-head {
+    border: none;
+  }
+  .transaction-table thead {
+    display: none;
+  }
+  .transaction-table tbody tr {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 20px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .transaction-table tbody td {
+    width: 100%;
+    text-align: end;
+    position: relative;
+  }
+  .transaction-table thead th,
+  .transaction-table tbody tr:not(:last-child) td {
+    border-bottom: unset;
+  }
+  .transaction-table thead th,
+  .transaction-table tbody tr td:not(:last-child) {
+    border-bottom: 1px solid #d3d3d3;
+  }
+  .transaction-table tbody tr td:first-child {
+    background-color: #f4f4f4e2;
+  }
+  .transaction-table tbody td::before {
+    position: absolute;
+    left: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: black;
+  }
+  .transaction-table tbody td:first-child {
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+  }
+  .transaction-table tbody td:last-child {
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+    border-bottom: none;
+  }
+  .transaction-table tbody td:nth-child(1)::before {
+    content: "Project";
+  }
+  .transaction-table tbody td:nth-child(2)::before {
+    content: "ID";
+  }
+  .transaction-table tbody td:nth-child(3)::before {
+    content: "Date";
+  }
+  .transaction-table tbody td:nth-child(4)::before {
+    content: "Transaction Type";
+  }
+  .transaction-table tbody td:nth-child(5)::before {
+    content: "Total Amount";
+  }
+  .transaction-table tbody td:nth-child(6)::before {
+    content: "Currency";
+  }
+
+  .billings-page-main .transaction-table tbody td:nth-child(1)::before {
+    content: "Invoice";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(2)::before {
+    content: "Billing Date";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(3)::before {
+    content: "Amount";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(4)::before {
+    content: "Plan";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(5)::before {
+    content: "Users";
+  }
+  .billings-page-main .transaction-table tbody td:nth-child(6)::before {
+    content: "Status";
+  }
+
+  .pagination-head {
+    margin-top: 0px;
+  }
+  .transaction-table tbody td:has(input) img {
+    margin-left: auto;
+  }
+  .transaction-table tbody td:has(input)::before {
+    left: 50px;
+  }
+}
+
+@media (max-width: 1275px) and (min-width: 625px) {
+  .upcoming-tasks-container ul.upcoming-tasks {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  ul.upcoming-tasks li {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .responsive-prev-chat-toggle-open-btn {
+    display: flex;
+  }
+  .responsive-prev-chat-toggle-close-btn {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    font-size: 18px;
+    display: flex;
+  }
+  .responsive-prev-chat-toggle-close-btn input {
+    display: none;
+  }
+  .chating-container .message-members-container {
+    position: absolute;
+    width: 100%;
+    z-index: 6;
+    transition: all 0.3s ease;
+    /* left: -100vw; */
+    transform: scale(0);
+  }
+  .chating-page-container .chating-container {
+    grid-template-columns: 100%;
+  }
+  .message-members-container:has(input#responsive-prev-chat-toggle:checked) {
+    /* left: 0; */
+    transform: scale(1);
+  }
+  .all-prev-chats-container .prev-chat-header > i {
+    position: absolute;
+    z-index: 4;
+    right: 60px;
+  }
+}
+@media (max-width: 625px) {
+  .chat-projects-todos {
+    display: flex;
+    flex-direction: column;
+  }
+  .chat-projects-todos .task-range-container,
+  .completed-projects-container {
+    padding: 20px;
+  }
+  .tasks-related-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .category-content-container {
+    display: block;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-messsages-timeline-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  .projects-messsages-timeline-container .messages-holder-container {
+    min-height: 400px;
+  }
+  .projects-messsages-timeline-container .all-projects-container {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: unset;
+  }
+  .all-projects-container .related-project {
+    aspect-ratio: unset;
+    padding: 20px 30px;
+    display: grid;
+    grid-template-columns: 70px auto;
+    grid-template-rows: max-content max-content;
+    grid-template-areas: "icon type" "icon number";
+    justify-content: left;
+  }
+  .all-projects-container .related-project i {
+    grid-area: icon;
+  }
+  .all-projects-container .related-project span {
+    grid-area: type;
+    margin: 0;
+  }
+  .all-projects-container .related-project h2 {
+    grid-area: number;
+    margin: 3px 0 0 0;
+  }
+  .messages-holder-container .messages-holder {
+    min-height: 400px;
+  }
+  .tickets-form .ticket-inputs-container {
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  .ticket-inputs-container .ticket-input-group {
+    width: 100%;
+  }
+  .ticket-message-container {
+    margin: 20px 0 0 0;
+  }
+  .category-content-container .tickets-container {
+    padding: 20px;
+  }
+
+  .chat-messages-container {
+    min-width: unset;
+    width: 100%;
+  }
+  .projects-timeline-container .timeline-chart {
+    height: 400px;
+  }
+}
+
+@media (max-width: 575px) {
+  .upcoming-tasks-container ul.upcoming-tasks {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+  ul.upcoming-tasks li {
+    width: 47%;
+  }
+}
+@media (max-width: 500px) {
+  ul.timeline-bar li {
+    width: 50px;
+  }
+  .billing-details .billing-pricings div h1 {
+    font-size: 24px;
+  }
+  .billing-details .billing-pricings div i {
+    font-size: 18px;
+    margin-right: 3px;
+  }
+  .billing-details .billing-pricings p {
+    font-size: 10px;
+  }
+  .team-developers-container .team-developers {
+    padding: 30px 10px;
+    max-width: 300px;
+    overflow: hidden;
+
+    top: 10vh;
+  }
+  .team-developers .team-developers-circle-container {
+    width: 290px;
+  }
+  .team-developers-circle-container ul li {
+    inset: 24px;
+  }
+  .team-developers-circle-container ul li div img {
+    width: 40px;
+  }
+  .team-developers-circle-container .more-info {
+    inset: 45px;
+  }
+  .team-developers-circle-container ul li div span {
+    top: 42px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 450px) {
+  section.popup-section .popup-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 425px) {
+  .upcoming-tasks-container ul.upcoming-tasks {
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  ul.upcoming-tasks li {
+    width: 100%;
+    aspect-ratio: unset;
+    padding: 20px 0;
+  }
+  .chat-projects-todos .task-range-container {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    row-gap: 20px;
+  }
+  .task-range-container .range {
+    margin: auto;
+  }
+  .main-content-container .category-header {
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+  .task-range-container .text {
+    margin: 0;
+  }
+  .main-content-container:has(.category-content-container) {
+    padding: 20px;
+  }
+
+  .todo-table thead tr td:nth-child(3) {
+    display: none;
+  }
+  .todo-table tbody tr {
+    display: grid;
+    grid-template-columns: auto min-content;
+    grid-template-rows: auto auto;
+    grid-template-areas: "name time" "per per";
+    row-gap: 10px;
+  }
+
+  .todo-table tbody tr td:nth-child(1) {
+    width: auto;
+    grid-area: name;
+  }
+  .todo-table tbody tr td:nth-child(2) {
+    grid-area: time;
+    width: min-content;
+  }
+
+  .todo-table tbody tr td:nth-child(3) {
+    grid-area: per;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  section.popup-section .popup-main {
+    padding: 50px 0;
+  }
+  .popup-info-container li.popup-info {
+    width: 100%;
+    border: none !important;
+  }
+  .popup-container .popup-header {
+    flex-wrap: wrap;
+  }
+  .popup-header div {
+    margin: 5px 0 0 auto;
+  }
+  .projects-container .project-container {
+    /* grid-template-areas: "serial" "name" "range range" "timeline timeline" "members members" "btn btn"; */
+    grid-template-columns: repeat(1, 100%);
+    overflow: hidden;
+    /* grid-template-rows: repeat(auto-fill, max-content); */
+  }
+  .project-container .project-range h5 {
+    max-width: unset;
+  }
+  .project-container .project-serial {
+    /* grid-area: serial; */
+  }
+  .project-container .project-name {
+    border: none;
+    /* grid-area: name; */
+  }
+  .project-container .project-range {
+    /* grid-area: range; */
+  }
+  .project-container .project-timeline {
+    /* grid-area: timeline; */
+    border-top: inherit;
+    margin: 0;
+    min-width: 100%;
+  }
+  .project-container .project-team-members {
+    /* grid-area: members; */
+  }
+  .project-container .project-button {
+    /* grid-area: btn; */
+  }
+}
+
+@media (max-width: 380px) {
+  .card-details-btn .card-info {
+    flex-direction: column;
+    row-gap: 10px;
+    width: 100%;
+    align-items: baseline;
+  }
+  .billing-plan-container .billing-details {
+    flex-direction: column;
+    row-gap: 5px;
+    margin-top: 15px;
+    align-items: baseline;
+  }
+  .billing-details .billing-pricings {
+    margin-left: auto;
+  }
+  .card-info .card-details {
+    margin: 0;
+  }
+}
+@media (max-width: 340px) {
+  .todo-table tbody tr {
+    grid-template-rows: auto auto;
+    grid-template-columns: 70% min-content;
+    grid-template-areas: "name name" "per time";
+  }
+
+  .todo-table tbody tr td:nth-child(3) {
+    min-width: 80%;
+  }
+  .chat-projects-todos .task-range-container {
+    min-width: unset;
+  }
+  .timeline-container ul.timeline-bar {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    row-gap: 50px;
+  }
+  ul.timeline-bar li {
+    width: 70px;
+  }
+  ul.timeline-bar::before {
+    width: 5px;
+    height: 100%;
+  }
+  ul.timeline-bar::after {
+    width: 5px;
+    height: 0;
+    top: 0;
+  }
+  ul.timeline-bar:has(li:nth-child(2)[active])::after {
+    width: 5px;
+    height: 33%;
+  }
+  ul.timeline-bar:has(li:nth-child(3)[active])::after {
+    width: 5px;
+    height: 66%;
+  }
+  ul.timeline-bar:has(li:nth-child(4)[active])::after {
+    width: 5px;
+    height: 99%;
+  }
+}
